@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BitacoraDetalle } from 'src/app/models/bitacora-detalle';
-import { BitacoraDetalleService } from 'src/app/service/bitacora-detalle.service';
+import { BitacoraMantenimientoService } from 'src/app/service/bitacora-mantenimiento.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { BitacoraMantenimiento } from 'src/app/models/bitacora-mantenimiento';
-import { Vehiculo } from 'src/app/models/vehiculo';
 
 
 @Component({
@@ -15,11 +13,16 @@ import { Vehiculo } from 'src/app/models/vehiculo';
 export class NuevoBitacoraMantenimientoComponent implements OnInit {
 
   fecha: string = '';
-  vehiculo: Vehiculo = null;
-  bitacoraMantenimiento: BitacoraMantenimiento = null;
+  clasificacion: string = '';
+  bitacoraMankilometrajeMomentotenimiento: string = '';
+  trabajoRealizado: string = '';
+  Mecanico: string = '';
+  costo: number = null;
+  fechaMantenimientoSiguiente: string = '';
+  notas: string = '';
 
   constructor(
-    private bitacoraDetalleService: BitacoraDetalleService,
+    private bitacoraMantenimientoService: BitacoraMantenimientoService,
     private toastr: ToastrService,
     private router: Router
   ) { }
@@ -27,8 +30,10 @@ export class NuevoBitacoraMantenimientoComponent implements OnInit {
   ngOnInit(): void {
   }
   onCreate(): void{
-    const bitacoraDetalle = new BitacoraDetalle(this.fecha, this.vehiculo, this.bitacoraMantenimiento);
-    this.bitacoraDetalleService.save(bitacoraDetalle).subscribe(
+    const bitacoraMantenimiento = new BitacoraMantenimiento(this.fecha, this,this.clasificacion, 
+      this.bitacoraMankilometrajeMomentotenimiento, this.trabajoRealizado, this.Mecanico,
+      this.costo, this.fechaMantenimientoSiguiente, this.notas);
+    this.bitacoraMantenimientoService.save(bitacoraMantenimiento).subscribe(
       data => {
         this.toastr.success('Se ha creado el producto Correctamente', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
