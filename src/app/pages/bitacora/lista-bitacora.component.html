@@ -1,0 +1,23 @@
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">idVehiculo</th>
+        <th scope="col">idBitacora Mantenimiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bitacora of bitacoraDetalle">
+        
+        <td>{{bitacora.idBitacoraDetalle}}</td>
+        <td>{{bitacora.fecha}}</td>
+        <td>{{bitacora.vehiculo.idVehiculo}}$</td>
+        <td>{{bitacora.bitacoraMantenimiento.idBitacoraMantenimiento}}</td>
+        <td>{{bitacora.precio}}$</td>
+        <td><button class="btn btn-outline-primary" routerLink="/detalle/{{bitacora.idBitacoraDetalle}}">Ver</button></td>
+        <td><button class="btn btn-outline-warning" routerLink="/editar/{{bitacora.idBitacoraDetalle}}">Editar</button></td>
+        <td><button class="btn btn-outline-danger" (click)="borrar(producto)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>

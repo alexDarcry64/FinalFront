@@ -1,0 +1,33 @@
+<div class="row mt-5" *ngIf="vehiculo">
+    <div class="col-md-4 mx-auto">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Detalle
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>ID</b>{{vehiculo.idVehiculo}}</li>
+              <li class="list-group-item"><b>NOMBRE</b>{{vehiculo.numeroEconomico}}</li>
+              <li class="list-group-item"><b>PRECIO</b>{{vehiculo.fechaIngreso}}</li>
+              <li class="list-group-item"><b>ID</b>{{vehiculo.numeroSerie}}</li>
+              <li class="list-group-item"><b>NOMBRE</b>{{vehiculo.capacidadVehicular}}</li>
+              <li class="list-group-item"><b>PRECIO</b>{{vehiculo.color}}</li>
+              <li class="list-group-item"><b>ID</b>{{vehiculo.anio}}</li>
+              <li class="list-group-item"><b>NOMBRE</b>{{vehiculo.precioCompra}}</li>
+              <li class="list-group-item"><b>PRECIO</b>{{vehiculo.propietario}}</li>
+              <li class="list-group-item"><b>ID</b>{{vehiculo.numeroLlantas}}</li>
+              <li class="list-group-item"><b>NOMBRE</b>{{vehiculo.medida}}</li>
+              <li class="list-group-item"><b>PRECIO</b>{{vehiculo.combustible}}</li>
+              <li class="list-group-item"><b>ID</b>{{vehiculo.kmLitros}}</li>
+              <li class="list-group-item"><b>NOMBRE</b>{{vehiculo.capacidadCombustible}}</li>
+              <li class="list-group-item"><b>PRECIO</b>{{vehiculo.rendimiento}}</li>
+              <li class="list-group-item"><b>ID</b>{{vehiculo.placas}}</li>
+              <li class="list-group-item"><b>NOMBRE</b>{{vehiculo.tipoVehiculo}}</li>
+              <li class="list-group-item"><b>PRECIO</b>{{vehiculo.modeloVehiculo}}</li>
+            </ul>
+            <div class="card-footer">
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"> Volver</button>
+            </div>
+          </div>
+         
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="row mt-5">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha"
+                    [(ngModel)]="bitacoraDetalle.fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio" name="precio"
+                    [(ngModel)]="bitacoraDetalle.vehiculo" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio" name="precio"
+                    [(ngModel)]="bitacoraDetalle.bitacoraMantenimiento" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>
+
