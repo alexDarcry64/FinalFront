@@ -3,12 +3,44 @@
         <div class="row mt-5">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombre"> Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                    <label for="fecha">fecha</label>
+                    <input type="text" class="form-control" id="fecha" name="fecha"
+                    [(ngModel)]="bitacoraMantenimiento.fecha" required>
                 </div>
                 <div class="form-group">
-                    <label for="precio"> Precio</label>
-                    <input type="number" class="form-control" id="precio" name="precio" [(ngModel)]="precio" required>
+                    <label for="clasificacion">clasificacion</label>
+                    <input type="number" class="form-control" id="clasificacion" name="clasificacion"
+                    [(ngModel)]="bitacoraMantenimiento.clasificacion" required>
+                </div>
+                <div class="form-group">
+                    <label for="kilometrajeMomento">kilometrajeMomento</label>
+                    <input type="text" class="form-control" id="kilometrajeMomento" name="kilometrajeMomento"
+                    [(ngModel)]="bitacoraMantenimiento.kilometrajeMomento" required>
+                </div>
+                <div class="form-group">
+                    <label for="trabajoRealizado">trabajoRealizado</label>
+                    <input type="number" class="form-control" id="trabajoRealizado" name="trabajoRealizado"
+                    [(ngModel)]="bitacoraMantenimiento.trabajoRealizado" required>
+                </div>
+                <div class="form-group">
+                    <label for="Mecanico">Mecanico</label>
+                    <input type="text" class="form-control" id="Mecanico" name="Mecanico"
+                    [(ngModel)]="bitacoraMantenimiento.Mecanico" required>
+                </div>
+                <div class="form-group">
+                    <label for="costo">costo</label>
+                    <input type="number" class="form-control" id="costo" name="costo"
+                    [(ngModel)]="bitacoraMantenimiento.costo" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaMantenimientoSiguiente">fechaMantenimientoSiguiente</label>
+                    <input type="text" class="form-control" id="fechaMantenimientoSiguiente" name="fechaMantenimientoSiguiente"
+                    [(ngModel)]="bitacoraMantenimiento.fechaMantenimientoSiguiente" required>
+                </div>
+                <div class="form-group">
+                    <label for="notas">notas</label>
+                    <input type="number" class="form-control" id="notas" name="notas"
+                    [(ngModel)]="bitacoraMantenimiento.notas" required>
                 </div>
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
             </form>

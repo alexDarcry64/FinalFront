@@ -1,13 +1,19 @@
-<div class="row mt-5" *ngIf="producto">
+<div class="row mt-5" *ngIf="bitacoraMantenimiento">
     <div class="col-md-4 mx-auto">
         <div class="card" style="width: 18rem;">
             <div class="card-header">
               Detalle
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><b>ID</b>{{producto.id}}</li>
-              <li class="list-group-item"><b>NOMBRE</b>{{producto.nombre}}</li>
-              <li class="list-group-item"><b>PRECIO</b>{{producto.precio}}</li>
+              <li class="list-group-item"><b>ID</b>{{bitacoraMantenimiento.idBitacoraMantenimiento}}</li>
+              <li class="list-group-item"><b>FECHA</b>{{bitacoraMantenimiento.fecha}}</li>
+              <li class="list-group-item"><b>CLASIFICACION</b>{{bitacoraMantenimiento.clasificacion}}</li>
+              <li class="list-group-item"><b>KILOMETRAJE MOMENTO</b>{{bitacoraMantenimiento.kilometrajeMomento}}</li>
+              <li class="list-group-item"><b>TRABAJO REALIZADO</b>{{bitacoraMantenimiento.trabajoRealizado}}</li>
+              <li class="list-group-item"><b>MECANICO</b>{{bitacoraMantenimiento.Mecanico}}</li>
+              <li class="list-group-item"><b>COSTO</b>{{bitacoraMantenimiento.costo}}</li>
+              <li class="list-group-item"><b>FECHA DE MANTENIMIENTO SIGUIENTE</b>{{bitacoraMantenimiento.fechaMantenimientoSiguiente}}</li>
+              <li class="list-group-item"><b>NOTAS</b>{{bitacoraMantenimiento.notas}}</li>
             </ul>
             <div class="card-footer">
                 <button class="btn btn-outline-primary btn-block" (click)="volver()"> Volver</button>
