@@ -3,14 +3,72 @@
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre"
-                    [(ngModel)]="producto.nombre" required>
+                    <label for="numeroEconomico"> numeroEconomico</label>
+                    <input type="text" class="form-control" id="numeroEconomico" name="numeroEconomico" [(ngModel)]="numeroEconomico" required>
                 </div>
                 <div class="form-group">
-                    <label for="precio">Precio</label>
-                    <input type="number" class="form-control" id="precio" name="precio"
-                    [(ngModel)]="producto.precio" required>
+                    <label for="fechaIngreso"> fechaIngreso</label>
+                    <input type="number" class="form-control" id="fechaIngreso" name="fechaIngreso" [(ngModel)]="fechaIngreso" required>
+                </div>
+                <div class="form-group">
+                    <label for="numeroSerie"> numeroSerie</label>
+                    <input type="text" class="form-control" id="numeroSerie" name="numeroSerie" [(ngModel)]="numeroSerie" required>
+                </div>
+                <div class="form-group">
+                    <label for="capacidadVehicular"> capacidadVehicular</label>
+                    <input type="number" class="form-control" id="capacidadVehicular" name="capacidadVehicular" [(ngModel)]="capacidadVehicular" required>
+                </div>
+                <div class="form-group">
+                    <label for="color"> color</label>
+                    <input type="text" class="form-control" id="color" name="color" [(ngModel)]="color" required>
+                </div>
+                <div class="form-group">
+                    <label for="anio"> anio</label>
+                    <input type="number" class="form-control" id="anio" name="anio" [(ngModel)]="anio" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre"> precioCompra</label>
+                    <input type="text" class="form-control" id="precioCompra" name="precioCompra" [(ngModel)]="precioCompra" required>
+                </div>
+                <div class="form-group">
+                    <label for="propietario"> propietario</label>
+                    <input type="number" class="form-control" id="propietario" name="propietario" [(ngModel)]="propietario" required>
+                </div>
+                <div class="form-group">
+                    <label for="numeroLlantas"> numeroLlantas</label>
+                    <input type="text" class="form-control" id="numeroLlantas" name="numeroLlantas" [(ngModel)]="numeroLlantas" required>
+                </div>
+                <div class="form-group">
+                    <label for="medida"> medida</label>
+                    <input type="number" class="form-control" id="medida" name="medida" [(ngModel)]="medida" required>
+                </div>
+                <div class="form-group">
+                    <label for="combustible"> combustible</label>
+                    <input type="text" class="form-control" id="combustible" name="combustible" [(ngModel)]="combustible" required>
+                </div>
+                <div class="form-group">
+                    <label for="kmLitros"> kmLitros</label>
+                    <input type="number" class="form-control" id="kmLitros" name="kmLitros" [(ngModel)]="kmLitros" required>
+                </div>
+                <div class="form-group">
+                    <label for="capacidadCombustible"> capacidadCombustible</label>
+                    <input type="text" class="form-control" id="capacidadCombustible" name="capacidadCombustible" [(ngModel)]="capacidadCombustible" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio"> rendimiento</label>
+                    <input type="number" class="form-control" id="rendimiento" name="rendimiento" [(ngModel)]="rendimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="placas"> placas</label>
+                    <input type="text" class="form-control" id="placas" name="placas" [(ngModel)]="placas" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipoVehiculo"> tipoVehiculo</label>
+                    <input type="number" class="form-control" id="tipoVehiculo" name="tipoVehiculo" [(ngModel)]="tipoVehiculo" required>
+                </div>
+                <div class="form-group">
+                    <label for="modeloVehiculo"> modeloVehiculo</label>
+                    <input type="number" class="form-control" id="modeloVehiculo" name="modeloVehiculo" [(ngModel)]="modeloVehiculo" required>
                 </div>
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
             </form>
